@@ -412,7 +412,6 @@ function flatten(arr){
     console.log(nArry);
 };
 //flatten([1, [2, [3, [4]], 5], 6])
-console.log("有點搞不懂我前兩三天對22題的煩憂???");
 
 //題目二十三  
 function tree(n){
@@ -433,6 +432,40 @@ function tree(n){
             console.log(' '.repeat(n-1)+'*'.repeat(1));   
         }   
     }
-
 };
 //tree(5)
+console.log("又是個嶄新的動腦時間惹");
+
+//題目二十三
+function winner(arr){
+    let result = '';
+    //列
+    for(let i=0;i<3;i++){
+        if(arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2]){
+            return arr[i][0]
+        }
+    };
+    //行
+    for(let j=0;j<3;j++){
+        if(arr[0][j] == arr[1][j] && arr[1][j] == arr[2][j]){
+            return arr[0][j]
+        }
+    };
+    //左斜
+    if(arr[0][0] == arr[1][1] &&  arr[1][1]== arr[2][2]){
+        return arr[0][0]
+    };
+    //右斜
+    if(arr[0][2] == arr[1][1] && arr[1][1]== arr[2][0]){
+        return arr[0][2]
+    };
+    //平手
+    return 'draw'
+}
+/*console.log( 
+ winner([
+    ['O', 'O', 'X'],
+    ['O', 'O', 'X'],
+    ['X', 'X', '']
+ ])
+ );*/
