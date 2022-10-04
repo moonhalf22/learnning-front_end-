@@ -436,7 +436,7 @@ function tree(n){
 //tree(5)
 console.log("又是個嶄新的動腦時間惹");
 
-//題目二十三
+//題目二十四
 function winner(arr){
     let result = '';
     //列
@@ -469,3 +469,21 @@ function winner(arr){
     ['X', 'X', '']
  ])
  );*/
+
+ //第二十五題
+ function isPrime(num){
+    if (num == 0 || num == 1){
+        return false;
+    }
+    
+    for(let i=2 ;i<num ;i++){
+        if(num%i ==0){
+            return false
+        }else{
+            return true
+        }
+    }
+ }
+ console.log(
+    isPrime(9)
+ );
