@@ -485,5 +485,35 @@ function winner(arr){
     }
  }
  console.log(
-    isPrime(9)
+    //isPrime(9)
  );
+
+ //412. Fizz Buzz 9:23
+ let fizzBuzz = function(n) {
+    let arr=[];
+    let f='Fizz', b='Buzz', fb='FizzBuzz';
+
+    for(let i=1;i<=n;i++){
+        
+        if(i % 3 == 0 && i % 5 == 0){
+            arr.push(fb);
+        }else if(i % 5 == 0){
+            arr.push(b);
+        }else if(i % 3==0){
+            arr.push(f);
+        }else{
+            arr.push(i);
+      }
+    }
+    console.log(arr);
+};
+//fizzBuzz(30);
+
+//876. 链表的中间结点
+let middleNode = function(head) {
+    let i =head.length;
+    let y = i/2;
+    y= Math.floor(y)
+    console.log( head [y]);
+};
+middleNode([1,2,3,4,5,6,7,8])
